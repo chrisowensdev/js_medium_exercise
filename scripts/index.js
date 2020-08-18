@@ -7,42 +7,39 @@ function madlib(name, subject) {
 
 //madlib("Chris", "music");
 
-
 // 2. Tip Calculator
 function tipAmount(amount, service) {
     let tip;
     if (service === 'good') {
-        tip = .20;
+        tip = 0.2;
     } else if (service === 'fair') {
-        tip = .15;
+        tip = 0.15;
     } else if (service === 'bad') {
-        tip = .10;
+        tip = 0.1;
     } else {
-        return "Invalid";
+        return 'Invalid';
     }
     console.log(amount * tip);
 }
 
 //tipAmount(100, 'good');
 
-
 // 3. Tip Calculator 2
 function totalAmount(amount, service) {
     let tip;
     if (service === 'good') {
-        tip = .20;
+        tip = 0.2;
     } else if (service === 'fair') {
-        tip = .15;
+        tip = 0.15;
     } else if (service === 'bad') {
-        tip = .10;
+        tip = 0.1;
     } else {
-        return "Invalid";
+        return 'Invalid';
     }
-    console.log(amount + (amount * tip));
+    console.log(amount + amount * tip);
 }
 
 //totalAmount(100, 'good');
-
 
 // 4a. Print Numbers (For Loop)
 function printNumbersFor(start, end) {
@@ -51,7 +48,6 @@ function printNumbersFor(start, end) {
     }
 }
 // printNumbersFor(1, 10);
-
 
 // 4b. Print Numbers (While Loop)
 function printNumbersWhile(start, end) {
@@ -62,23 +58,21 @@ function printNumbersWhile(start, end) {
 }
 // printNumbersWhile(1, 10);
 
-
 // 5. Print a Square
 function printSquare(num) {
     let row = 1;
     while (row <= num) {
-        console.log("*".repeat(num));
-        row++
+        console.log('*'.repeat(num));
+        row++;
     }
 }
 // printSquare(5)
 
-
 // 6. Print a Box
 function printBox(width, height) {
-    let horizontalBorder = "-".repeat(width);
-    let space = " ".repeat(width - 2);
-    let verticalBorder = "|" + space + "|";
+    let horizontalBorder = '-'.repeat(width);
+    let space = ' '.repeat(width - 2);
+    let verticalBorder = '|' + space + '|';
     console.log(`
     ${horizontalBorder}
     ${space.repeat(height - 2)}
@@ -87,69 +81,57 @@ function printBox(width, height) {
 
 // printBox(5, 5)
 
-
 // 7. Print a banner
 function printBanner(message) {
-    console.log("-".repeat(message.length + 4));
+    console.log('-'.repeat(message.length + 4));
     console.log(`- ${message} -`);
-    console.log("-".repeat(message.length + 4));
+    console.log('-'.repeat(message.length + 4));
 }
 //printBanner("Hello how are you");
-
 
 // 8. Leetspeak
 function leetspeak(word) {
     let replace = {
-        "A": "4",
-        "E": "3",
-        "G": "6",
-        "I": "1",
-        "O": "0",
-        "S": "5",
-        "T": "7"
-    }
-    word = word.toUpperCase()
+        A: '4',
+        E: '3',
+        G: '6',
+        I: '1',
+        O: '0',
+        S: '5',
+        T: '7',
+    };
+    word = word.toUpperCase();
     for (let i = 0; i < word.length; i++) {
         if (word[i] in replace) {
             // console.log(word[i].replace(replace.word[i]));
         }
     }
-    console.log(replace.
-        "A")
-    console.log(word)
+    // console.log(replace.
+    //     "A")
+    console.log(word);
 }
-leetspeak("another");
-
+leetspeak('another');
 
 // 9. Long-long Vowels
-function longLongVowels(word) {
-
-}
+function longLongVowels(word) {}
 //longLongVowels(word)
-
 
 // 10. Just the positives
 function positiveNumbers(arr) {
-    positive = []
+    positive = [];
     for (let i = 0; i < arr.length; i++) {
         if (arr[i] >= 0) {
-            positive.push(arr[i])
+            positive.push(arr[i]);
         }
     }
-    console.log(positive)
+    console.log(positive);
 }
 //positiveNumbers([-2, -1, 0, 1, 2])
 
-
 // 11. Caesar Cipher
-function ciper(phrase) {
-
-}
+function ciper(phrase) {}
 // cipher("Another phrase")
 
-
 // 12. Caesar Cipher 2
-function decipher(phrase) {
-
-}
+function decipher(phrase) {}
 // decipher("Another pharse")
